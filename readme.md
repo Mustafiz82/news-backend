@@ -121,21 +121,21 @@ DELETE /news/652f1c91a70a77c51c2c10b4
 ---
 
 ### 🌟 Featured News
-**GET** `/news/featured`
+**GET** `/news/category/featured/`
 
 Returns up to 10 manually featured news (`isFeatured: true`).
 
 ---
 
 ### 🕒 Latest News
-**GET** `/news/latest`
+**GET** `/news/category/latest`
 
 Returns the 10 most recently created news articles.
 
 ---
 
 ### 🔥 Trending News
-**GET** `/news/trending`
+**GET** `/news/category/trending`
 
 Returns top 10 news sorted by `views` (most viewed first).
 

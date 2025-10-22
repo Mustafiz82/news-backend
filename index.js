@@ -171,7 +171,7 @@ app.get("/categories", async (req, res) => {
 // =========================
 
 // ✅ Featured News
-app.get("/news/featured", async (req, res) => {
+app.get("/news/category/featured", async (req, res) => {
   const db = await getDB();
   const NewsCollection = db.collection("newsCollection");
   const result = await NewsCollection.find({ isFeatured: true })
@@ -182,7 +182,7 @@ app.get("/news/featured", async (req, res) => {
 });
 
 // ✅ Latest News
-app.get("/news/latest", async (req, res) => {
+app.get("/news/category/latest", async (req, res) => {
   const db = await getDB();
   const NewsCollection = db.collection("newsCollection");
   const result = await NewsCollection.find({})
@@ -193,7 +193,7 @@ app.get("/news/latest", async (req, res) => {
 });
 
 // ✅ Trending News
-app.get("/news/trending", async (req, res) => {
+app.get("/news/category/trending", async (req, res) => {
   const db = await getDB();
   const NewsCollection = db.collection("newsCollection");
   const result = await NewsCollection.find({})
@@ -202,6 +202,9 @@ app.get("/news/trending", async (req, res) => {
     .toArray();
   res.send(result);
 });
+
+
+app.listen(3000 , () => {})
 
 // ✅ Export app for Vercel serverless
 export default app;
