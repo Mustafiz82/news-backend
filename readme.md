@@ -8,7 +8,7 @@ This API provides endpoints to manage and fetch news articles and categories wit
 ## 🧠 Base URL
 
 ```
-http://news-backend-chi-livid.vercel.app/
+https://news-backend-chi-livid.vercel.app/
 ```
 
 ---
